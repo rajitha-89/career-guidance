@@ -1,0 +1,19 @@
+.mentorqaContainer {
+  position: relative;
+  background-image: url('/images/dash.jpeg'); /* Replace with your desired background color */
+  padding: 20px;
+  min-height: 100vh;
+  color: #333; /* Set text color for better contrast */
+  z-index: 1; /* Ensures the content appears above any overlay */
+}
+
+.mentorqaContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+/* Optional: Semi-transparent black overlay */
+  z-index: 0; /* Keeps the overlay behind the content */
+}

@@ -1,0 +1,31 @@
+.goal-tracker-container {
+  background-image: url('/images/dash.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 50px 20px;
+  min-height: 100vh;
+  
+
+}
+
+.goal-card {
+  background-color: rgba(255, 255, 255, 0.8); /* white background with transparency */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.container.goal-card {
+  position: relative;
+  z-index: 2;
+}
+.goal-button {
+  width: 120px; /* or adjust to 130px/140px as you like */
+  height: 45px; /* optional: make button a bit taller */
+  font-weight: bold; /* optional: make text bold */
+}
+
+
+

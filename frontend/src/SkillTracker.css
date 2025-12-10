@@ -1,0 +1,142 @@
+
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.skill-form {
+  display: flex;
+
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skill-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.skill-form button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skill-form button:hover {
+  background-color: #0056b3;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  background-color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+.card {
+  border-radius: 16px;
+}
+.btn-primary {
+  min-width: 80px;
+}
+
+
+
+.skill-container {
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.btn-danger {
+  background-color: #e60000;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.skill-container h2 {
+  font-size: 2rem;
+  color: #330066;
+  font-weight: bold;
+}
+
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+ 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.btn-primary {
+  background-color: #6a0dad; 
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.list-group {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;  
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.skill-tracker-background {
+  min-height: 100vh;
+  background-image: url('/images/dash.jpeg'); /* Adjust path properly */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #c82333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

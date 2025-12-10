@@ -1,0 +1,431 @@
+
+
+/*.skill-container {
+  background: rgba(255, 255, 255, 0.7); /* slight transparency 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease-in;
+
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.skill-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skill-form input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.skill-form button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skill-form button:hover {
+  background-color: #0056b3;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-item {
+  background-color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+.card {
+  border-radius: 16px;
+}
+.btn-primary {
+  min-width: 80px;
+}
+
+  /* src/SkillTracker.css 
+.skilltracker-background {
+  background-image: url('/images/dash.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+.skill-container {
+  background: rgba(255, 255, 255, 0.9); /* White overlay 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+.btn-danger {
+  background-color: #e60000;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.skill-container h2 {
+  font-size: 2rem;
+  color: #330066;
+  font-weight: bold;
+}
+
+/* Typing animation 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blink animation 
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.btn-primary {
+  background-color: #6a0dad; /* a rich purple 
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.list-group {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.5s;  
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+*/
+
+
+.goal-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.goal-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 2px solid #0d6efd;
+}
+
+.list-group-item {
+  background-color: #f8f9fa;
+  transition: 0.3s all ease;
+}
+
+.list-group-item:hover {
+  background-color: #e9ecef;
+}
+
+.progress {
+  background-color: #d1e7dd;
+}
+
+.progress-bar {
+  font-weight: bold;
+}
+
+button {
+  font-size: 16px;
+}
+.completed-goal {
+  text-decoration: line-through;
+  color: grey;
+}
+.container {
+  
+    background-image: url('/images/dash.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    align-items: center;
+  }
+
+/* Optional: To make content more readable */
+.container > * {
+  background: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.goal-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className="goal-input-container mt-3">
+        <input
+          type="text"
+          className="form-control goal-input"
+          value={goal}
+          onChange={(e) => setGoal(e.target.value)}
+          placeholder="Enter your goal"
+        />
+        <button className="btn btn-primary ms-2" onClick={addGoal}>
+          Add Goal
+        </button>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      import React, { useState } from 'react';
+import styles from'./MentorQA.css';
+
+function MentorQA() {
+  const [questions, setQuestions] = useState([]);
+  const [newQuestion, setNewQuestion] = useState('');
+  const [answers, setAnswers] = useState({});
+  const [submittedAnswers, setSubmittedAnswers] = useState({});
+  const [editingAnswerIndex, setEditingAnswerIndex] = useState(null); // To track which answer is being edited
+  const [successIndex, setSuccessIndex] = useState(null); // For success message
+
+  const handleQuestionSubmit = () => {
+    if (newQuestion.trim() !== '') {
+      setQuestions([...questions, newQuestion]);
+      setNewQuestion('');
+    }
+  };
+
+  const handleAnswerChange = (index, value) => {
+    setAnswers({
+      ...answers,
+      [index]: value,
+    });
+  };
+
+  const handleAnswerSubmit = (index) => {
+    if (answers[index]?.trim() !== '') {
+      setSubmittedAnswers({
+        ...submittedAnswers,
+        [index]: answers[index],
+      });
+
+      // Show success message
+      setSuccessIndex(index);
+      setTimeout(() => setSuccessIndex(null), 2000); // Hide after 2 seconds
+
+      // Reset editing state
+      setEditingAnswerIndex(null);
+    }
+  };
+
+  const handleEditAnswer = (index) => {
+    setEditingAnswerIndex(index); // Set the index of the answer to edit
+  };
+
+  const handleDeleteQuestion = (indexToDelete) => {
+    const updatedQuestions = questions.filter((_, index) => index !== indexToDelete);
+    setQuestions(updatedQuestions);
+
+    const updatedAnswers = { ...answers };
+    delete updatedAnswers[indexToDelete];
+    setAnswers(updatedAnswers);
+
+    const updatedSubmitted = { ...submittedAnswers };
+    delete updatedSubmitted[indexToDelete];
+    setSubmittedAnswers(updatedSubmitted);
+  };
+
+  return (
+    <div className={styles.mentorqaContainer}> {/* Use CSS module classes */}
+      <h2 className="text-center mb-4">Mentor Q&A</h2>
+
+      {/* Ask Question Section */}
+      <div className={styles.askSection}>
+        <h4>Ask a Mentor:</h4>
+        <div className="input-group mb-3">
+          <input
+            type="text"
+            className="form-control"
+            value={newQuestion}
+            onChange={(e) => setNewQuestion(e.target.value)}
+            placeholder="Type your question..."
+          />
+          <button className="btn btn-primary" onClick={handleQuestionSubmit}>
+            Ask
+          </button>
+        </div>
+      </div>
+
+      {/* Questions List */}
+      <div className={styles.questionsList}>
+        {questions.length === 0 ? (
+          <p className="text-muted text-center mt-5" style={{ fontSize: '18px' }}>
+            No questions yet. Be the first to ask a mentor! 
+          </p>
+        ) : (
+          questions.map((q, index) => (
+            <div key={index} className="card mb-3 shadow-sm">
+              <div className="card-body">
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <h5 className="card-title mb-0">Q: {q}</h5>
+                  <button
+                    className="btn btn-danger btn-sm"
+                    style={{ width: '70px', fontSize: '14px' }}
+                    onClick={() => handleDeleteQuestion(index)}
+                  >
+                    Delete
+                  </button>
+                </div>
+
+                {submittedAnswers[index] ? (
+                  <>
+                    <p className="mt-2"><strong>Answer:</strong> {submittedAnswers[index]}</p>
+                    <button
+                      className="btn btn-warning btn-sm mt-2"
+                      style={{ width: '100px', fontSize: '14px' }}
+                      onClick={() => handleEditAnswer(index)}
+                    >
+                      Edit Answer
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <textarea
+                      className="form-control mt-2"
+                      rows="2"
+                      placeholder="Write answer here..."
+                      value={answers[index] || ''}
+                      onChange={(e) => handleAnswerChange(index, e.target.value)}
+                    />
+                    <button
+                      className="btn btn-success btn-sm mt-2"
+                      style={{ width: '100px', fontSize: '14px' }}
+                      onClick={() => handleAnswerSubmit(index)}
+                    >
+                      Submit Answer
+                    </button>
+                    {successIndex === index && (
+                      <div className="text-success mt-2" style={{ fontWeight: 'bold' }}>
+                         Answer submitted!
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {editingAnswerIndex === index && (
+                  <div className="text-info mt-2">
+                    <strong>Edit your answer:</strong>
+                    <textarea
+                      className="form-control mt-2"
+                      rows="2"
+                      value={answers[index] || ''}
+                      onChange={(e) => handleAnswerChange(index, e.target.value)}
+                    />
+                    <button
+                      className="btn btn-success btn-sm mt-2"
+                      style={{ width: '100px', fontSize: '14px' }}
+                      onClick={() => handleAnswerSubmit(index)}
+                    >
+                      Update Answer
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default MentorQA;
+
+
+
+
+
