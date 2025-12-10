@@ -1,6 +1,6 @@
 # Career Guidance Platform
 
-A MERN-based web application that helps students explore suitable careers, track skills, and set goals.
+This is a MERN-based Career Guidance Platform that helps students explore suitable career paths based on their skills and interests. It includes user authentication, career quizzes, and a personalized dashboard for tracking goals and skills.
 
 ## Tech Stack
 
